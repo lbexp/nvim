@@ -40,4 +40,11 @@ return require('packer').startup(function(use)
   use({'hrsh7th/cmp-nvim-lsp'})
 
   use 'wakatime/vim-wakatime'
+
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
 end)
