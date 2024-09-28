@@ -28,6 +28,7 @@ require('lspconfig').ts_ls.setup({})
 require('lspconfig').eslint.setup({})
 require('lspconfig').gopls.setup({})
 require('lspconfig').rust_analyzer.setup({})
+require('lspconfig').clangd.setup({})
 
 ---
 -- Autocompletion setup
