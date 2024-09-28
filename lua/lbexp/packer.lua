@@ -32,4 +32,6 @@ return require('packer').startup(function(use)
   use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
+
+  use 'wakatime/vim-wakatime'
 end)
