@@ -47,4 +47,11 @@ return require('packer').startup(function(use)
           require('Comment').setup()
       end
   }
+
+  use {
+      "williamboman/mason.nvim",
+      config = function()
+          require("mason").setup()
+      end
+  }
 end)
