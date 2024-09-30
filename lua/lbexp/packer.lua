@@ -54,4 +54,12 @@ return require('packer').startup(function(use)
           require("mason").setup()
       end
   }
+
+  use {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = function()
+          require("nvim-autopairs").setup {}
+      end
+  }
 end)
