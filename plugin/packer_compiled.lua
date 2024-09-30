@@ -85,10 +85,22 @@ _G.packer_plugins = {
     path = "/Users/fiqarapr/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["conform.nvim"] = {
+    config = { "\27LJ\2\n \4\0\0\5\0\26\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\22\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0=\4\17\0035\4\18\0=\4\19\0035\4\20\0=\4\21\3=\3\23\0025\3\24\0=\3\25\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\15timeout_ms\3ô\3\15lsp_format\rfallback\21formatters_by_ft\1\0\2\19format_on_save\0\21formatters_by_ft\0\rmarkdown\1\2\0\0\rprettier\tyaml\1\2\0\0\rprettier\tjson\1\2\0\0\rprettier\thtml\1\2\0\0\rprettier\bcss\1\2\0\0\rprettier\20typescriptreact\1\2\0\0\rprettier\20javascriptreact\1\2\0\0\rprettier\15typescript\1\2\0\0\rprettier\15javascript\1\0\t\bcss\0\thtml\0\tyaml\0\rmarkdown\0\tjson\0\15javascript\0\15typescript\0\20javascriptreact\0\20typescriptreact\0\1\2\0\0\rprettier\nsetup\fconform\frequire\0" },
+    loaded = true,
+    path = "/Users/fiqarapr/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/fiqarapr/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
+  },
+  ["indent-blankline.nvim"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0" },
+    loaded = true,
+    path = "/Users/fiqarapr/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -163,18 +175,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: solarized.nvim
-time([[Config for solarized.nvim]], true)
-try_loadstring("\27LJ\2\n³\1\0\0\4\0\n\0\0246\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0026\1\0\0009\1\1\1+\2\2\0=\2\6\0016\1\0\0009\1\1\1'\2\3\0=\2\2\0019\1\a\0004\3\0\0B\1\2\0016\1\0\0009\1\b\0019\1\t\1'\3\5\0B\1\2\1K\0\1\0\16colorscheme\bcmd\nsetup\18termguicolors\14solarized\frequire\tdark\15background\6o\bvim\0", "config", "solarized.nvim")
-time([[Config for solarized.nvim]], false)
 -- Config for: mason.nvim
 time([[Config for mason.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nmason\frequire\0", "config", "mason.nvim")
 time([[Config for mason.nvim]], false)
+-- Config for: solarized.nvim
+time([[Config for solarized.nvim]], true)
+try_loadstring("\27LJ\2\n³\1\0\0\4\0\n\0\0246\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\4\0'\2\5\0B\0\2\0026\1\0\0009\1\1\1+\2\2\0=\2\6\0016\1\0\0009\1\1\1'\2\3\0=\2\2\0019\1\a\0004\3\0\0B\1\2\0016\1\0\0009\1\b\0019\1\t\1'\3\5\0B\1\2\1K\0\1\0\16colorscheme\bcmd\nsetup\18termguicolors\14solarized\frequire\tdark\15background\6o\bvim\0", "config", "solarized.nvim")
+time([[Config for solarized.nvim]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\n \4\0\0\5\0\26\0\0296\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\22\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\0035\4\16\0=\4\17\0035\4\18\0=\4\19\0035\4\20\0=\4\21\3=\3\23\0025\3\24\0=\3\25\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\15timeout_ms\3ô\3\15lsp_format\rfallback\21formatters_by_ft\1\0\2\19format_on_save\0\21formatters_by_ft\0\rmarkdown\1\2\0\0\rprettier\tyaml\1\2\0\0\rprettier\tjson\1\2\0\0\rprettier\thtml\1\2\0\0\rprettier\bcss\1\2\0\0\rprettier\20typescriptreact\1\2\0\0\rprettier\20javascriptreact\1\2\0\0\rprettier\15typescript\1\2\0\0\rprettier\15javascript\1\0\t\bcss\0\thtml\0\tyaml\0\rmarkdown\0\tjson\0\15javascript\0\15typescript\0\20javascriptreact\0\20typescriptreact\0\1\2\0\0\rprettier\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
