@@ -13,6 +13,11 @@ conform.setup({
         markdown = { "prettier" },
         cpp = { "clang_format" }
     },
+    formatters = {
+        clang_format = {
+            args = '--style="{IndentWidth: 4}"'
+        },
+    },
     format_on_save = {
         -- These options will be passed to conform.format()
         timeout_ms = 1000,
