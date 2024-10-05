@@ -77,6 +77,7 @@ return require('packer').startup(function(use)
                     json = { "prettier" },
                     yaml = { "prettier" },
                     markdown = { "prettier" },
+                    cpp = { "clang_format" }
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
