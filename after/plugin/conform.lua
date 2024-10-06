@@ -17,6 +17,12 @@ conform.setup({
         clang_format = {
             args = '--style="{IndentWidth: 4}"'
         },
+        prettier = {
+            prepend_args = {
+                '--use-tabs',
+                '--tab-width 4'
+            }
+        }
     },
     format_on_save = {
         -- These options will be passed to conform.format()
