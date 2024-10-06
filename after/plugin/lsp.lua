@@ -30,6 +30,8 @@ require('lspconfig').gopls.setup({})
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').clangd.setup({})
 require('lspconfig').lua_ls.setup({})
+require('lspconfig').html.setup({})
+require('lspconfig').cssls.setup({})
 
 ---
 -- Autocompletion setup
