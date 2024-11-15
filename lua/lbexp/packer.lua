@@ -42,9 +42,18 @@ return require('packer').startup(function(use)
     use 'wakatime/vim-wakatime'
 
     use {
+        'JoosepAlviste/nvim-ts-context-commentstring',
+        config = function()
+            require('ts_context_commentstring').setup()
+        end
+    }
+
+    use {
         'numToStr/Comment.nvim',
         config = function()
-            require('Comment').setup()
+            require('Comment').setup({
+                pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+            })
         end
     }
 
@@ -59,7 +68,7 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = function()
-            require("nvim-autopairs").setup {}
+            require("nvim-autopairs").setup()
         end
     }
 
@@ -71,4 +80,12 @@ return require('packer').startup(function(use)
             require("ibl").setup()
         end
     }
+
+    use({
+        "kylechui/nvim-surround",
+        tag = "*",
+        config = function()
+            require("nvim-surround").setup()
+        end
+    })
 end)
