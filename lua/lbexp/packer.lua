@@ -14,15 +14,9 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'maxmx03/solarized.nvim',
+        'craftzdog/solarized-osaka.nvim',
         config = function()
-            vim.o.background = 'dark'
-            ---@type solarized
-            local solarized = require('solarized')
-            vim.o.termguicolors = true
-            vim.o.background = 'dark'
-            solarized.setup({})
-            vim.cmd.colorscheme 'solarized'
+            vim.cmd.colorscheme 'solarized-osaka'
         end
     }
 
