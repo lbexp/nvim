@@ -32,6 +32,7 @@ require('lspconfig').clangd.setup({})
 require('lspconfig').lua_ls.setup({})
 require('lspconfig').html.setup({})
 require('lspconfig').cssls.setup({})
+require 'lspconfig'.tailwindcss.setup({})
 
 ---
 -- Autocompletion setup
