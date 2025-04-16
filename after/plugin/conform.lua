@@ -11,16 +11,19 @@ conform.setup({
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
-        cpp = { "clang_format" }
+        cpp = { "clang_format" },
+        c = { "clang_format" }
     },
     formatters = {
         clang_format = {
             args = '--style="{IndentWidth: 4}"'
         },
         prettier = {
+            single_quote = true,
+            jsx_single_quote = true,
             prepend_args = {
                 '--use-tabs',
-                '--tab-width 4'
+                '--tab-width 2'
             }
         }
     },
