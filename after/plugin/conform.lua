@@ -19,11 +19,10 @@ conform.setup({
             args = '--style="{IndentWidth: 4}"'
         },
         prettier = {
-            single_quote = true,
-            jsx_single_quote = true,
             prepend_args = {
-                '--use-tabs',
-                '--tab-width 2'
+                '--use-space',
+                '--space-width 2',
+                '--single-quote'
             }
         }
     },
