@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
     -- LSP shenanigans
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v4.x' 
+        branch = 'v4.x'
     }
     use {
         'neovim/nvim-lspconfig'
