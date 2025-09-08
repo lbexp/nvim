@@ -4,15 +4,20 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-
+    -- Nvim package manager
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.8',
-        -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        'wbthomason/packer.nvim'
     }
 
+    -- Tooling package manager
+    use {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup()
+        end
+    }
+
+    -- Editor theme
     use {
         'craftzdog/solarized-osaka.nvim',
         config = function()
@@ -20,28 +25,68 @@ return require('packer').startup(function(use)
         end
     }
 
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-
-    use('theprimeagen/harpoon')
-
-    use('mbbill/undotree')
-
-    use('tpope/vim-fugitive')
-
-    use({ 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' })
-    use({ 'neovim/nvim-lspconfig' })
-    use({ 'hrsh7th/nvim-cmp' })
-    use({ 'hrsh7th/cmp-nvim-lsp' })
-
-    use 'wakatime/vim-wakatime'
-
+    -- Visualize indentation line
     use {
-        'JoosepAlviste/nvim-ts-context-commentstring',
+        "lukas-reineke/indent-blankline.nvim",
         config = function()
-            require('ts_context_commentstring').setup()
+            require("ibl").setup()
         end
     }
 
+    -- Track coding activity
+    use {
+        'wakatime/vim-wakatime'
+    }
+
+    -- Built-in git
+    use {
+        'tpope/vim-fugitive'
+    }
+
+    -- Find/grep mechanism
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        -- or                            , branch = '0.1.x',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+
+    -- Undo/redo mechanism
+    use {
+        'mbbill/undotree'
+    }
+
+    -- File switching shortcuts
+    use {
+        'theprimeagen/harpoon'
+    }
+
+    -- Language parser
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
+    -- LSP shenanigans
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v4.x' 
+    }
+    use {
+        'neovim/nvim-lspconfig'
+    }
+    use {
+        'hrsh7th/nvim-cmp'
+    }
+    use {
+        'hrsh7th/cmp-nvim-lsp'
+    }
+
+    -- Formatter
+    use {
+        "stevearc/conform.nvim"
+    }
+
+    -- Comment/uncomment mechanism
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -50,14 +95,14 @@ return require('packer').startup(function(use)
             })
         end
     }
-
     use {
-        "williamboman/mason.nvim",
+        'JoosepAlviste/nvim-ts-context-commentstring',
         config = function()
-            require("mason").setup()
+            require('ts_context_commentstring').setup()
         end
     }
 
+    -- Auto create char pair
     use {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
@@ -66,20 +111,12 @@ return require('packer').startup(function(use)
         end
     }
 
-    use("stevearc/conform.nvim")
-
+    -- Wrap blocks with brackets/ticks
     use {
-        "lukas-reineke/indent-blankline.nvim",
-        config = function()
-            require("ibl").setup()
-        end
-    }
-
-    use({
         "kylechui/nvim-surround",
         tag = "*",
         config = function()
             require("nvim-surround").setup()
         end
-    })
+    }
 end)
