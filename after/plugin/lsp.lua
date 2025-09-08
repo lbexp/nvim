@@ -29,7 +29,9 @@ require('lspconfig').eslint.setup({})
 require('lspconfig').gopls.setup({})
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').clangd.setup({})
-require('lspconfig').lua_ls.setup({})
+-- TODO: Enable this if got any workaround
+-- NOTE: Disabled because of an issue on TextChangedI event
+-- require('lspconfig').lua_ls.setup({})
 require('lspconfig').html.setup({})
 require('lspconfig').cssls.setup({})
 require('lspconfig').tailwindcss.setup({})
