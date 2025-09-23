@@ -26,7 +26,13 @@ lsp_zero.extend_lspconfig({
 -- Language servers
 require('lspconfig').ts_ls.setup({})
 require('lspconfig').eslint.setup({})
-require('lspconfig').gopls.setup({})
+require('lspconfig').gopls.setup({
+    vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        update_in_insert = false,
+    })
+})
 require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').clangd.setup({})
 require('lspconfig').lua_ls.setup({})
