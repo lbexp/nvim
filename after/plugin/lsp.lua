@@ -40,6 +40,8 @@ vim.lsp.config('html', {})
 vim.lsp.config('cssls', {})
 vim.lsp.config('tailwindcss', {})
 
+vim.lsp.enable({'ts_ls', 'eslint', 'gopls', 'rust_analyzer', 'clangd', 'lua_ls', 'html', 'cssls', 'tailwindcss'})
+
 ---
 -- Autocompletion setup
 ---
