@@ -24,21 +24,23 @@ lsp_zero.extend_lspconfig({
 })
 
 -- Language servers
-require('lspconfig').ts_ls.setup({})
-require('lspconfig').eslint.setup({})
-require('lspconfig').gopls.setup({
+vim.lsp.config('ts_ls', {})
+vim.lsp.config('eslint', {})
+vim.lsp.config('gopls', {
     vim.diagnostic.config({
         virtual_text = true,
         signs = true,
         update_in_insert = false,
     })
 })
-require('lspconfig').rust_analyzer.setup({})
-require('lspconfig').clangd.setup({})
-require('lspconfig').lua_ls.setup({})
-require('lspconfig').html.setup({})
-require('lspconfig').cssls.setup({})
-require('lspconfig').tailwindcss.setup({})
+vim.lsp.config('rust_analyzer', {})
+vim.lsp.config('clangd', {})
+vim.lsp.config('lua_ls', {})
+vim.lsp.config('html', {})
+vim.lsp.config('cssls', {})
+vim.lsp.config('tailwindcss', {})
+
+vim.lsp.enable({'ts_ls', 'eslint', 'gopls', 'rust_analyzer', 'clangd', 'lua_ls', 'html', 'cssls', 'tailwindcss'})
 
 ---
 -- Autocompletion setup
