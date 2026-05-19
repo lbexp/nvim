@@ -17,7 +17,7 @@ conform.setup({
 	},
 	formatters = {
 		clang_format = {
-			args = '--style="{IndentWidth: 4, AllowShortFunctionsOnASingleLine: Empty}"',
+			args = '--style="{IndentWidth: 4, AllowShortFunctionsOnASingleLine: Empty, SortIncludes: false}"',
 		},
 		prettier = {
 			prepend_args = {
