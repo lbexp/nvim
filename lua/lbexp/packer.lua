@@ -64,7 +64,6 @@ return require("packer").startup(function(use)
 	-- Language parser
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		tag = "v0.10.0",
 		run = ":TSUpdate",
 	})
 
