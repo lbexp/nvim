@@ -46,8 +46,7 @@ return require("packer").startup(function(use)
 	-- Find/grep mechanism
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
-		-- or                            , branch = '0.1.x',
+		branch = "master",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
