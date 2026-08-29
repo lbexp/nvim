@@ -1,33 +1,33 @@
-require("nvim-treesitter.config").setup({
-	-- A list of parser names, or "all" (the listed parsers MUST always be installed)
-	ensure_installed = {
-		"javascript",
-		"typescript",
-		"go",
-		"cpp",
-		"c",
-		"lua",
-		"vim",
-		"vimdoc",
-		"query",
-		"markdown",
-		"markdown_inline",
-	},
+-- nvim-treesitter was rewritten (incompatible with the old API):
+-- it now only manages parser/query installation. Highlighting is handled
+-- by Neovim core via `vim.treesitter.start()` (see `:h treesitter-highlight`).
 
-	-- Install parsers synchronously (only applied to `ensure_installed`)
-	sync_install = false,
+local parsers = {
+    "javascript",
+    "typescript",
+    "go",
+    "cpp",
+    "c",
+    "lua",
+    "vim",
+    "vimdoc",
+    "query",
+    "markdown",
+    "markdown_inline",
+}
 
-	-- Automatically install missing parsers when entering buffer
-	-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-	auto_install = true,
+-- setup() is only needed to override the install_dir
+-- (default: stdpath('data') .. '/site').
+-- require("nvim-treesitter").setup({})
 
-	highlight = {
-		enable = true,
+-- Install parsers asynchronously; no-op if already installed.
+require("nvim-treesitter").install(parsers)
 
-		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-		-- Using this option may slow down your editor, and you may see some duplicate highlights.
-		-- Instead of true it can also be a list of languages
-		additional_vim_regex_highlighting = false,
-	},
+-- Enable treesitter highlighting (core feature).
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = parsers,
+    callback = function()
+        vim.treesitter.start()
+    end,
 })
+
